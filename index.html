@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carol</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    html,body{height: 100%}
+    body{background-color: #caadee;position: relative;}
+    #rightDownText{position: absolute;right: 10%;bottom:30%;}
+    #rightHeart{position: absolute;right: 10%;bottom:20%;}
+    .rightText{display: inline-block; color: #fff;font-size: 20px;font-weight: 700;text-shadow:1px 2px 0px #8771a9;} 
+    #rightTitle{position: absolute;right:10%;top:10%;} 
+    .shadow{ color: #fff;font-size: 50px;font-weight: 700;text-shadow:5px 3px 0px #8771a9;}
+    .heart {position:relative;top:  50%;left: 50%; width: 30px;height: 30px;background-color: #fff;transform: rotate(-45deg);}
+    .heart:before {
+  content: "";
+  position:absolute;
+  top: -50%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.heart:after{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+    @keyframes  mytext{
+        0%{transform:  scale(1) rotate(0deg)}
+        25%{transform: scale(0.66)  rotate(90deg) }
+        50%{transform: scale(0.36)  rotate(180deg)}
+        75%{transform: scale(0.66)  rotate(270deg);}
+        100%{transform: scale(1) rotate(360deg);}
+    }
+  </style>
+</head>
+<body>
+  <div id="rightTitle">
+    <p class="shadow"><i>"</i></p>
+    <p class="shadow"><i>珈乐</i></p>
+    <p class="shadow"><i>Carol</i></p>
+  </div>
+  <div id='rightHeart' style="display: flex;justify-content: space-around;">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+  <div id="rightDownText">
+
+  </div>
+  <script>
+    // let text ='约好了,骑士们来梦里听我唱歌~'
+    let text ='约好了,骑士们来梦里听我唱歌~'
+    function init(){
+      let arr = text.split('')
+      console.log(arr)
+      let str =''
+      for(let i =0;i<arr.length;i++){
+         str += '<span class="rightText'+ ' ' +"text"+i+'"style="animation:mytext 3s '+i*100+'ms infinite">'+arr[i]+'</span>'
+      }
+      document.getElementById('rightDownText').innerHTML=str
+    }
+    init()
+  </script>
+</body>
+</html>
