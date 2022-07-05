@@ -8,47 +8,72 @@
   <style>
     *{margin: 0;padding: 0;}
     html,body{height: 100%}
-    body{background-color: #caadee;position: relative;}
+    body{background-color: #caadee;position: relative;overflow: hidden;}
     #rightDownText{position: absolute;right: 10%;bottom:30%;}
-    #rightHeart{position: absolute;right: 10%;bottom:20%;}
-    .rightText{display: inline-block; color: #fff;font-size: 20px;font-weight: 700;text-shadow:1px 2px 0px #8771a9;} 
-    #rightTitle{position: absolute;right:10%;top:10%;} 
-    .shadow{ color: #fff;font-size: 50px;font-weight: 700;text-shadow:5px 3px 0px #8771a9;}
+    #rightHeart{width: 300px;;position: absolute;right: 15%;bottom:20%;}
+    .rightText{transform-origin:center;display: inline-block; color: #fff;font-size: 35px;font-weight: 700;text-shadow:1px 2px 0px #8771a9;} 
+    #rightTitle{position: absolute;right:10%;top:0;} 
+    .shadow{ color: #fff;font-size:80px;font-weight: 700;text-shadow:5px 3px 0px #8771a9;}
     .heart {position:relative;top:  50%;left: 50%; width: 30px;height: 30px;background-color: #fff;transform: rotate(-45deg);}
-    .heart:before {
-  content: "";
-  position:absolute;
-  top: -50%;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #fff;
-}
-.heart:after{
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border-radius: 50%;
-}
+    .heart:before { content: "";position:absolute;top: -50%; left: 0;width: 30px; height: 30px; border-radius: 50%; background-color: #fff;}
+    .heart:after{content: "";position: absolute;top: 0px;left: 50%;width: 30px;height: 30px;background-color: #fff;border-radius: 50%;}
     @keyframes  mytext{
-        0%{transform:  scale(1) rotate(0deg)}
-        25%{transform: scale(0.66)  rotate(90deg) }
-        50%{transform: scale(0.36)  rotate(180deg)}
-        75%{transform: scale(0.66)  rotate(270deg);}
-        100%{transform: scale(1) rotate(360deg);}
+        0%{transform:   scale(1)   rotate(0deg)}
+        20%{transform:  scale(1)   rotate(0deg)}
+        30%{transform:  scale(0.3) translate(120px,0px) rotate(135deg) ; opacity: 1}
+        40%{transform:  scale(0.3) translate(120px,0px) rotate(135deg) ; opacity: 0 }
+        50%{transform:  scale(0) translate(150px,0px) rotate(270deg) ;opacity: 0;}
+        60%{transform:  scale(0.3) translate(120px,0px) rotate(135deg) ; }
+        70%{transform:  scale(0.3) translate(120px,0px) rotate(135deg) ; opacity: 0}
+        80%{transform:  scale(1)   rotate(0deg); opacity: 1}
+        100%{transform: scale(1)   rotate(0deg);}
+    }
+    @keyframes myRotate{
+        0%{transform:   scale(1)   rotate(0deg)}
+        100%{transform:  scale(1)   rotate(-360deg)}
+    }
+    .rotateBox{
+      overflow: hidden;
+      width: 95vh;
+      height: 95vh;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      position: absolute;
+      left:-5% ;
+      bottom: -5%;
+      animation: myRotate 10s linear infinite;
+    }
+    .rotateBox:before {content: "";position:absolute;top:0; left:20%;width: 1px; height: 900px; background-color: #fff;
+    }
+    .rotateBox:after {content: "";position:absolute;top: 0%;transform: rotate(45deg); right:  20%;width: 1px; height: 500px; border-radius: 50%; background-color: #fff ;
+    }
+    .rotateBox2{
+      background-color: #c7aded;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 200px;
+      height: 200px;
+      border: 1px solid #fff;
+      border-radius: 50%;
     }
   </style>
 </head>
 <body>
+  <div class="rotateBox">
+    <div class="rotateBox2">
+
+    </div>
+  </div>
   <div id="rightTitle">
     <p class="shadow"><i>"</i></p>
     <p class="shadow"><i>珈乐</i></p>
     <p class="shadow"><i>Carol</i></p>
+  </div>
+  <div class="star">
+    
   </div>
   <div id='rightHeart' style="display: flex;justify-content: space-around;">
     <div class="heart"></div>
@@ -68,7 +93,7 @@
       console.log(arr)
       let str =''
       for(let i =0;i<arr.length;i++){
-         str += '<span class="rightText'+ ' ' +"text"+i+'"style="animation:mytext 3s '+i*100+'ms infinite">'+arr[i]+'</span>'
+         str += '<span class="rightText'+ ' ' +"text"+i+'"style="animation:mytext 7s '+i*70+'ms infinite ">'+arr[i]+'</span>'
       }
       document.getElementById('rightDownText').innerHTML=str
     }
