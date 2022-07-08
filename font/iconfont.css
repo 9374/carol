@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1657271380801') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-huatong:before {
+  content: "\e69c";
+}
+
+.icon-yinfu:before {
+  content: "\e649";
+}
+
+.icon-huli:before {
+  content: "\e6a6";
+}
+
+.icon-groupsets_:before {
+  content: "\e60f";
+}
+
+.icon-tuzi:before {
+  content: "\e618";
+}
+
+.icon-huli1:before {
+  content: "\e619";
+}
+
+.icon-miao:before {
+  content: "\e615";
+}
+
+.icon-niuniu:before {
+  content: "\e616";
+}
+
+.icon-huli2:before {
+  content: "\e61a";
+}
+
+.icon-wan:before {
+  content: "\e61e";
+}
+
+.icon-gougou:before {
+  content: "\e606";
+}
+
+.icon-jita-danse:before {
+  content: "\e60d";
+}
+
+.icon-tu:before {
+  content: "\e697";
+}
+
+.icon-niu:before {
+  content: "\e698";
+}
+
+.icon-huli3:before {
+  content: "\e694";
+}
+
+.icon-yinxiang-xian:before {
+  content: "\e645";
+}
+
+.icon-mutou:before {
+  content: "\e7bb";
+}
+
+.icon-yumaoqiu:before {
+  content: "\e621";
+}
+
+.icon-xiaogoushou:before {
+  content: "\e655";
+}
+
+.icon-yumaoqiu1:before {
+  content: "\e665";
+}
+
