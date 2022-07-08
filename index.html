@@ -59,6 +59,56 @@
       border: 1px solid #fff;
       border-radius: 50%;
     }
+    .star{
+        width:40px;height:50px;
+        position:relative;
+        background-color: #ffd414;
+    }
+    .star:after{
+        content:" ";
+        width:30px;height:45px;
+        border-radius: 50%;
+        background-color: #caadee;
+        position: absolute;
+        top:-40%;
+        left: -30%;
+    }
+    .star:before{
+        content:" ";
+        width:30px;height:45px;
+        border-radius: 50%;
+        background-color: #caadee;
+        position: absolute;
+        bottom:-40%;
+        left: -30%;
+    }
+    .starChild{
+      position: absolute;
+      background-color: transparent;
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+    .starChild:after{
+        content:" ";
+        width:30px;height:45px;
+        border-radius: 50%;
+        background-color: #caadee;
+        position: absolute;
+        top:-40%;
+        right: -10%;
+    }
+    .starChild:before{
+        content:" ";
+        width:30px;height:45px;
+        border-radius: 50%;
+        background-color: #caadee;
+        position: absolute;
+        bottom:-40%;
+        right: -10%;
+    }
   </style>
 </head>
 <body>
@@ -67,13 +117,13 @@
 
     </div>
   </div>
-  <div id="rightTitle">
+  <div id="rightTitle" style="display: none;">
     <p class="shadow"><i>"</i></p>
     <p class="shadow"><i>珈乐</i></p>
     <p class="shadow"><i>Carol</i></p>
   </div>
   <div class="star">
-    
+    <div class="starChild"></div>
   </div>
   <div id='rightHeart' style="display: flex;justify-content: space-around;">
     <div class="heart"></div>
@@ -82,7 +132,7 @@
     <div class="heart"></div>
     <div class="heart"></div>
   </div>
-  <div id="rightDownText">
+  <div id="rightDownText" style="display: none;">
 
   </div>
   <script>
@@ -90,7 +140,7 @@
     let text ='约好了,骑士们来梦里听我唱歌~'
     function init(){
       let arr = text.split('')
-      console.log(arr)
+      // console.log(arr)
       let str =''
       for(let i =0;i<arr.length;i++){
          str += '<span class="rightText'+ ' ' +"text"+i+'"style="animation:mytext 7s '+i*70+'ms infinite ">'+arr[i]+'</span>'
