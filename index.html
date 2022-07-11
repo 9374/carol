@@ -6,20 +6,23 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
   <title>Carol</title>
-  <link rel="stylesheet" href="./font/iconfont.css">
+  <!-- <link rel="stylesheet" href="./font/iconfont.css"> -->
+  <script src="./font/iconfont.js"></script>
   <style>
     *{margin: 0;padding: 0;}
     html,body{height: 100%}
+    .icon { width: 7em; height: 7em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
     body{background-color: #caadee;position: relative;overflow: hidden;}
     #rightDownText{position: absolute;right: 10%;bottom:30%;}
-    #rightHeart{width: 8rem;position: absolute;right: 15%;bottom:20%;}
+    #rightHeart{width: 9rem;position: absolute;right:3%;bottom:20%;}
     .rightText{transform-origin:center;display: inline-block; color: #fff;font-size: 0.933rem;font-weight: 700;text-shadow:0.027rem 0.053rem 0px #8771a9;} 
     #rightTitle{position: absolute;right:10%;top:0;} 
     .shadow{ color: #fff;font-size:2.133rem;font-weight: 700;text-shadow:0.133rem 0.08rem 0px #8771a9;}
-    .heart {animation: cardiac1 3s linear infinite;position:relative;top:  50%;left: 50%; width: 0.8rem;height: 0.8rem;background-color: #fff;transform: rotate(-45deg);}
+    .heart {animation: cardiac1 3s linear infinite;position:relative; width: 0.8rem;height: 0.8rem;background-color: #fff;transform: rotate(-45deg);}
     .heart:before { content: "";position:absolute;top: -50%; left: 0;width: 0.8rem; height: 0.8rem; border-radius: 50%; background-color: #fff;}
     .heart:after{content: "";position: absolute;top: 0px;left: 50%;width: 0.8rem;height:0.8rem;background-color: #fff;border-radius: 50%;}
-    .heart i{animation: cardiac 3s linear infinite;position: absolute;font-size: 0.833rem;z-index: 10;transform: rotate(45deg) translate(-7%,-7%);}
+    /* .heart i{animation: cardiac 3s linear infinite;position: absolute;font-size: 0.8rem;z-index: 10;transform: rotate(45deg) translate(-7%,-7%);} */
+    .heart svg{animation: cardiac 3s linear infinite;position: absolute;top:50%;left:50%;z-index: 10;transform:  translate(-50%,-50%)rotate(45deg);}
     @keyframes  mytext{
         0%{transform:   scale(1)   rotate(0deg)}
         20%{transform:  scale(1)   rotate(0deg)}
@@ -36,11 +39,13 @@
         100%{transform:  scale(1)   rotate(-360deg)}
     }
     @keyframes cardiac {
-      0%{transform: scale(1)rotate(45deg) ;opacity: 1;}
-      20%{transform: scale(1.3)rotate(45deg) ;opacity: 1;}
-      50%{transform: scale(1)rotate(45deg) ;opacity: 1;}
-      70%{transform: scale(0.3)rotate(45deg);opacity: 1;}
-      100%{transform: scale(1) rotate(45deg);opacity: 1;}
+      0%{transform:translate(-45%,-50%) scale(0.7)rotate(45deg) ;opacity: 1;}
+      10%{transform:translate(-45%,-50%) scale(0.9) rotate(60deg) ;opacity: 1;}
+      20%{transform:translate(-45%,-50%) scale(0.8) rotate(45deg) ;opacity: 1;}
+      30%{transform:translate(-45%,-50%) scale(0.9) rotate(30deg) ;opacity: 1;}
+      50%{transform:translate(-45%,-50%) scale(0.8) rotate(45deg) ;opacity: 1;}
+      70%{transform: translate(-45%,-50%) scale(0.2)rotate(45deg);opacity: 1;}
+      100%{transform:  translate(-45%,-50%) scale(0.7)rotate(45deg);opacity: 1;}
     }
     @keyframes cardiac1 {
       0%{transform: scale(1) rotate(-45deg) ;opacity: 1;}
@@ -48,6 +53,10 @@
       50%{transform: scale(1)rotate(-45deg) ;opacity: 1;}
       70%{transform: scale(0.3)rotate(-45deg);opacity: 1;}
       100%{transform: scale(1) rotate(-45deg);opacity: 1;}
+    }
+    @keyframes loader{
+    0% {}
+    100% {background-position:100px}
     }
     .rotateBox{
       display: none;
@@ -77,56 +86,54 @@
       border: 1px solid #fff;
       border-radius: 50%;
     }
-    .star{
-        width:1.067rem;height:1.333rem;
-        position:relative;
-        background-color: #ffd414;
-    }
-    .star:after{
-        content:" ";
-        width:0.8rem;height:1.2rem;
-        border-radius: 50%;
-        background-color: #caadee;
-        position: absolute;
-        top:-40%;
-        left: -30%;
-    }
-    .star:before{
-        content:" ";
-        width:0.8rem;height:1.2rem;
-        border-radius: 50%;
-        background-color: #caadee;
-        position: absolute;
-        bottom:-40%;
-        left: -30%;
-    }
-    .starChild{
+    .lifadian{
       position: absolute;
-      background-color: transparent;
-      width: 1.333rem;
-      height: 1.333rem;
-      top: 50%;
-      left:50%;
-      transform: translate(-50%,-50%);
+      width: 2rem;
+      height: 20px;
+      border-radius: 0.267rem;
+      overflow: hidden;
+      right: 10%;
+      bottom: 0;
     }
-    .starChild:after{
-        content:" ";
-        width:0.8rem;height:1.2rem;
-        border-radius: 50%;
-        background-color: #caadee;
-        position: absolute;
-        top:-40%;
-        right: -10%;
+    .progress{
+      height: 100%;
+      width: 100%;
+      animation: loader 2s linear infinite; 
+      background-image: linear-gradient(-38deg,
+        #fff  0%, rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0)  10%, #fff 10%,
+        #fff 20%,rgba(0,0,0,0) 20%,
+        rgba(0,0,0,0) 30%,#fff 30%,
+        #fff  40%, rgba(0,0,0,0) 40%,
+        rgba(0,0,0,0) 50%,#fff 50%,
+        #fff  60%, rgba(0,0,0,0)60%,
+        rgba(0,0,0,0) 70%,#fff 70%,
+        #fff  80%, rgba(0,0,0,0) 80%,
+        rgba(0,0,0,0) 90%,#fff 90%,
+        #fff  100%, rgba(0,0,0,0) 100%
+      ); 
+            /* background-image: linear-gradient(-30deg,
+        #fff  0%, rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0)  12.5%, #fff 12.5%,
+        #fff 25%,rgba(0,0,0,0) 25%,
+        rgba(0,0,0,0) 37.5%,#fff 37.5%,
+        #fff  50%, rgba(0,0,0,0) 50%,
+        rgba(0,0,0,0) 62.5%,#fff 62.5%,
+        #fff  75%, rgba(0,0,0,0)75%,
+        rgba(0,0,0,0) 87.5%,#fff 87.5%,
+        #fff  100%, rgba(0,0,0,0) 100%
+      );  */
+
+       /* //自动重复背景 */
     }
-    .starChild:before{
-        content:" ";
-        width:0.8rem;height:1.2rem;
-        border-radius: 50%;
-        background-color: #caadee;
-        position: absolute;
-        bottom:-40%;
-        right: -10%;
+    .main{
+      position: absolute;
+      bottom: 0;
+      height: 100%;
     }
+   .main img{
+     height: 100%;
+   }
   </style>
   <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
 </head>
@@ -136,43 +143,90 @@
   
     </div>
   </div>
+  <div class="main" style="display: none;">
+    <img src="./images/carol.png" alt="">
+  </div>
   <div id="rightTitle" style="display: none;">
-    <p class="shadow"><i>"</i></p>
-    <p class="shadow"><i>珈乐</i></p>
-    <p class="shadow"><i>Carol</i></p>
+    <p class="shadow "><i>"</i></p>
+    <p class="shadow name"><i>珈乐</i></p>
+    <p class="shadow name2"><i>Carol</i></p>
   </div>
-  <div class="star">
-    <div class="starChild"></div>
-  </div>
-  <div id='rightHeart' style="display: flex;justify-content: space-around;">
-    <div class="heart AVA">      <i class="iconfont icon-wan" style='color:#bbbde6'></i></div>
-    <div class="heart bee">
-       <i class="iconfont icon-tu" style='color:#c04440'></i>
+  <div id='rightHeart' style="display: none;justify-content: space-around;">
+    <div class="heart ava">  
+      <!-- <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-wan"></use>
+      </svg>     -->
+      <!-- <i class="iconfont icon-wan" style='color:#bbbde6'></i>-->
+      </div> 
+    <div class="heart beela">
+                  <!-- <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-xingxing"></use>
+      </svg> -->
+       <!-- <i class="iconfont icon-xingxing" style='color:#c04440'></i> -->
     </div>
-    <div class="heart">
-       <i class="iconfont icon-huatong" style='color:#caadee'></i>
+    <div class="heart carol">
+     <!-- <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-toukui-qishi"></use>
+      </svg> -->
+       <!-- <i class="iconfont icon-toukui-qishi" style='color:#caadee'></i> -->
     </div>
-    <div class="heart">
-       <i class="iconfont icon-yumaoqiu" ></i>
+    <div class="heart diana">
+            <!-- <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-tangguo2"></use>
+      </svg> -->
+       <!-- <i class="iconfont icon-tangguo" style='color:black' ></i> -->
     </div>
-    <div class="heart">
-       <i class="iconfont icon-huli1" style='color:#fd9041'></i>
+    <div class="heart ">
+      <!-- <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-bingqilin1"></use>
+      </svg> -->
+       <!-- <i class="iconfont icon-tubiao-" style='color:#fd9041'></i> -->
     </div>
   </div>
   <div id="rightDownText" style="display: none;">
 
   </div>
+  <div class="lifadian">
+    <div class="progress">
+
+    </div>
+  </div>
   <script>
-    // let text ='约好了,骑士们来梦里听我唱歌~'
     let text ='约好了,骑士们来梦里听我唱歌~'
-    function init(){
+    function textInit(){
       let arr = text.split('')
-      // console.log(arr)
       let str =''
       for(let i =0;i<arr.length;i++){
          str += '<span class="rightText'+ ' ' +"text"+i+'"style="animation:mytext 7s '+i*70+'ms infinite ">'+arr[i]+'</span>'
       }
       document.getElementById('rightDownText').innerHTML=str
+    }
+    function heartInit(){
+      let heart= ''
+    let heartList = ['icon-wan','icon-xingxing','icon-toukui-qishi','icon-tangguo2','icon-bingqilin1']
+      for(let i =0;i<heartList.length;i++){
+        let use = '<use xlink:href="#'+heartList[i]+'"></use>'
+        let svg  = '<svg class="icon" aria-hidden="true">'+use+' </svg>'
+        heart+= '<div class="heart">'+svg+'</div>'
+      }
+        document.getElementById('rightHeart').innerHTML=heart
+    }
+    function nameInit(){
+
+    }
+    function resizeView(){
+      if(document.body.clientWidth>=540&&document.body.clientWidth>document.body.clientHeight){
+        console.log('宽')
+      }else{
+        console.log('phone')
+      }
+    }
+    function init(){
+      resizeView()
+      window.onresize=resizeView
+      textInit()
+      heartInit()
+      nameInit()
     }
     init()
   </script>

@@ -41,6 +41,13 @@
       "unicode_decimal": 58904
     },
     {
+      "icon_id": "3759586",
+      "name": "冰淇淋",
+      "font_class": "bingqilin",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
       "icon_id": "3811583",
       "name": "狐狸",
       "font_class": "huli1",
@@ -69,6 +76,20 @@
       "unicode_decimal": 58906
     },
     {
+      "icon_id": "5017290",
+      "name": "糖果",
+      "font_class": "tangguo",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "5091795",
+      "name": "冰淇淋",
+      "font_class": "tubiao-",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
       "icon_id": "5172950",
       "name": "碗",
       "font_class": "wan",
@@ -76,11 +97,32 @@
       "unicode_decimal": 58910
     },
     {
+      "icon_id": "5179987",
+      "name": "冰淇淋",
+      "font_class": "bingqilin1",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "5192241",
+      "name": "冰淇淋",
+      "font_class": "bingqilin2",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
       "icon_id": "5194272",
       "name": "狗狗",
       "font_class": "gougou",
       "unicode": "e606",
       "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "5244527",
+      "name": "糖果",
+      "font_class": "tangguo1",
+      "unicode": "e613",
+      "unicode_decimal": 58899
     },
     {
       "icon_id": "5320687",
@@ -111,11 +153,46 @@
       "unicode_decimal": 59028
     },
     {
+      "icon_id": "7846691",
+      "name": "糖果",
+      "font_class": "tangguo2",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "8289033",
+      "name": "星星",
+      "font_class": "xingxing",
+      "unicode": "e870",
+      "unicode_decimal": 59504
+    },
+    {
       "icon_id": "10408931",
       "name": "音响",
       "font_class": "yinxiang-xian",
       "unicode": "e645",
       "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "11222358",
+      "name": "星星",
+      "font_class": "xingxing1",
+      "unicode": "e75b",
+      "unicode_decimal": 59227
+    },
+    {
+      "icon_id": "13374962",
+      "name": "星星",
+      "font_class": "xingxing2",
+      "unicode": "e7c3",
+      "unicode_decimal": 59331
+    },
+    {
+      "icon_id": "15433472",
+      "name": "头盔-骑士",
+      "font_class": "toukui-qishi",
+      "unicode": "e6a7",
+      "unicode_decimal": 59047
     },
     {
       "icon_id": "18211436",
@@ -130,6 +207,13 @@
       "font_class": "yumaoqiu",
       "unicode": "e621",
       "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "26742379",
+      "name": "星星",
+      "font_class": "xingxing3",
+      "unicode": "e625",
+      "unicode_decimal": 58917
     },
     {
       "icon_id": "26878058",

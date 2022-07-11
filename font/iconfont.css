@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1657271380801') format('truetype');
+  src: url('iconfont.ttf?t=1657503231348') format('truetype');
 }
 
 .iconfont {
@@ -31,6 +31,10 @@
   content: "\e618";
 }
 
+.icon-bingqilin:before {
+  content: "\e620";
+}
+
 .icon-huli1:before {
   content: "\e619";
 }
@@ -47,12 +51,32 @@
   content: "\e61a";
 }
 
+.icon-tangguo:before {
+  content: "\e62d";
+}
+
+.icon-tubiao-:before {
+  content: "\e608";
+}
+
 .icon-wan:before {
   content: "\e61e";
 }
 
+.icon-bingqilin1:before {
+  content: "\e631";
+}
+
+.icon-bingqilin2:before {
+  content: "\e602";
+}
+
 .icon-gougou:before {
   content: "\e606";
+}
+
+.icon-tangguo1:before {
+  content: "\e613";
 }
 
 .icon-jita-danse:before {
@@ -71,8 +95,28 @@
   content: "\e694";
 }
 
+.icon-tangguo2:before {
+  content: "\e604";
+}
+
+.icon-xingxing:before {
+  content: "\e870";
+}
+
 .icon-yinxiang-xian:before {
   content: "\e645";
+}
+
+.icon-xingxing1:before {
+  content: "\e75b";
+}
+
+.icon-xingxing2:before {
+  content: "\e7c3";
+}
+
+.icon-toukui-qishi:before {
+  content: "\e6a7";
 }
 
 .icon-mutou:before {
@@ -81,6 +125,10 @@
 
 .icon-yumaoqiu:before {
   content: "\e621";
+}
+
+.icon-xingxing3:before {
+  content: "\e625";
 }
 
 .icon-xiaogoushou:before {
